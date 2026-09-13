@@ -2546,7 +2546,7 @@ function LoginPage({ login, setPage, toast }) {
   }
 };
 
-  const demo = (email, password) => { setEmail(email); setPassword(password); };
+  
 
   return (
     <div style={{ maxWidth: 420, margin: "2rem auto" }}>
@@ -2581,19 +2581,7 @@ function LoginPage({ login, setPage, toast }) {
         <button onClick={handleLogin} disabled={busy} style={{ width: "100%", padding: 12, background: "linear-gradient(135deg,#6366f1,#8b5cf6)", color: "#fff", border: "none", borderRadius: 10, fontWeight: 700, cursor: busy ? "default" : "pointer", opacity: busy ? .7 : 1, fontFamily: "inherit", fontSize: 15, marginBottom: 14 }}>{busy ? "Logging in…" : "Log in"}</button>
         <div style={{ textAlign: "center", fontSize: 13, color: "#9ca3af", marginBottom: 16 }}>Don't have an account? <button onClick={() => setPage("register")} style={{ background: "none", border: "none", color: "#6366f1", fontWeight: 600, cursor: "pointer", fontFamily: "inherit", fontSize: 13 }}>Sign up</button></div>
 
-        {/* Demo credentials */}
-        <div style={{ background: "#f8fafc", borderRadius: 10, padding: "12px 14px" }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: "#6b7280", marginBottom: 4 }}>Demo credentials</div>
-          <div style={{ fontSize: 11, color: "#9ca3af", marginBottom: 8 }}>Sign up with these once first — they're not created automatically anymore.</div>
-          {[
-            { label: "👑 Admin", email: "admin@swift.com", password: "admin123" },
-            { label: "🛵 Agent (Ravi)", email: "ravi@swift.com", password: "agent123" },
-          ].map(d => (
-            <button key={d.email} onClick={() => demo(d.email, d.password)} style={{ display: "block", width: "100%", textAlign: "left", padding: "7px 10px", background: "#fff", border: "1px solid #e5e7eb", borderRadius: 8, marginBottom: 6, cursor: "pointer", fontSize: 12, fontFamily: "inherit", color: "#374151" }}>
-              <span style={{ fontWeight: 700 }}>{d.label}</span> · {d.email} / {d.password}
-            </button>
-          ))}
-        </div>
+       
       </Card>
     </div>
   );
